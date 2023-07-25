@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minigames</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="">
+        <header class="header">
+            <h1>Login to Play</h1>
+        </header>
+        <main class="container">
+            <!-- Render the sub layout -->
+            {{> login-signup}}
+            {{{ body }}}
+        </main>
+    </div>
+
+    <!-- Render script for logged in users only -->
+    {{#if logged_in}}
+    <script src="/js/logout.js"></script>
+    {{/if}}
+</body>
+
+</html>
