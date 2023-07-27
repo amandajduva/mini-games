@@ -7,7 +7,7 @@ body{
 }
 .landing-intro{
     padding-top: 60px;
-    padding-left: 30%;
+    padding-left: 20%;
 }
 
 .spin{
@@ -15,8 +15,10 @@ body{
     background-repeat: no-repeat;
     width: 300px;
     height: 300px;
-    animation: spin 19s infinite;
+    animation: spin 40s infinite;
     z-index: 0;
+    filter: contrast(60%);
+
 }
 
 @keyframes spin {
@@ -35,7 +37,8 @@ body{
     z-index: 1;
     margin-top: 40px;
     margin-right: -60px;
-    text-shadow: 3px 5px 2px #474747;
+    text-shadow: rgb(167, 151, 64) 1px 2px;
+
 }
 
 .lname-intro{
@@ -45,5 +48,5 @@ body{
     z-index: 1;
     margin-left: -80px;
     margin-top: 40px;
-    text-shadow: 3px 5px 2px #474747;
+    text-shadow: rgb(167, 151, 64) 1px 2px;
 }
