@@ -1,31 +1,4 @@
-/* @import 'https://fonts.googleapis.com/css2?family=Lilita+One&display=swap';
-body {
-  background-image: url(./ripple.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-
-.game-space {
-  padding-top: 40px;
-  padding-bottom: 160px;
-}
-.game-space .game-header {
-  font-family: "Lilita One", cursive;
-  color: #EAF6FF;
-  font-size: 40px;
-  text-align: center;
-  padding-bottom: 24px;
-}
-.game-space .border {
-  padding: 55px;
-  height: 600px;
-  background-position: center;
-  background-size: cover;
-}
-.game-space .game {
-  border: 5px solid salmon;
-  height: 280px;
-} */
-
-/*# sourceMappingURL=style.css.map */
+@import 'https://fonts.googleapis.com/css2?family=Lilita+One&display=swap';
+.p5Canvas {
+  width: 1000px;
+}/*# sourceMappingURL=style.css.map */

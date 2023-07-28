@@ -1,12 +1,11 @@
-
 	let guessItem = null;
-	let interval = 68;
+	let interval = 58;
 	let results = [];
 	let solution = null;
 	let gameOver = false;
 
 	function setup(){
-		createCanvas(800, 300);
+		createCanvas(1350, 400);
 	}
 
 	function draw(){
