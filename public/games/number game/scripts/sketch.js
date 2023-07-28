@@ -1,7 +1,6 @@
 
-
 	let guessItem = null;
-	let interval = 48;
+	let interval = 68;
 	let results = [];
 	let solution = null;
 	let gameOver = false;
@@ -13,7 +12,7 @@
 	function draw(){
 		let gameScore = getGameScore(results);
 
-		if (gameScore.loss === 3 || gameScore.total === 10){
+		if (gameScore.loss === 3 || gameScore.total === 50){
 			gameOver = true;
 			displayGameOver(gameScore);
 			return;
