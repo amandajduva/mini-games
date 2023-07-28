@@ -1,5 +1,7 @@
+
+
 	let guessItem = null;
-	let interval = 80;
+	let interval = 48;
 	let results = [];
 	let solution = null;
 	let gameOver = false;
@@ -17,7 +19,7 @@
 			return;
 		}
 
-		background(220);
+		background(0);
 		if (frameCount === 1 || frameCount % interval === 0){
 			solution = null;
 			guessItem = new GuessItem(width/2, height/2, 10);
@@ -68,6 +70,7 @@
 
 		translate(width/2, height/2);
 		text(messages[parseInt(random(messages.length), 10)], 0, 0);
+		randomSeed();
 		pop();
 	}
 
@@ -143,10 +146,10 @@
 		this.x = x; 
 		this.y = y;
 		this.scale = scl;
-		this.scaleIncrement = 0.25;
+		this.scaleIncrement = 0.33;
 		this.content = getContent();
 		this.alpha = 255;
-		this.alphaDecrement = 3;
+		this.alphaDecrement = 6;
 		this.solved; 
 		this.contentMap = {
 			'1': 'one',
@@ -160,6 +163,19 @@
 			'9': 'nine',
 			'0': 'zero'
 		};
+
+		this.colors = [
+		[242, 186, 201],
+		[186, 215, 242],
+		[242, 226, 186],
+		[244, 172, 69],
+		[166, 28, 60],
+		[93, 211, 158],
+		[112, 3, 83],
+		[255, 147, 79],
+		[255, 170, 90],
+		[26, 27, 65]
+		];
 		
 		function getContent() {
 			return String(parseInt(random(10), 10));
@@ -176,12 +192,32 @@
 			return this.solved;
 		}
 
+		this.drawEllipse = function (size, strkWght, spdMult, seed){
+			push();
+			randomSeed(seed);
+			translate(this.x, this.y);
+			scale(this.scale * 0.5 * spdMult);
+			let clr = this.colors[parseInt(random(this.colors.length), 10)];
+			stroke(clr);
+
+			noFill();
+			strokeWeight(strkWght);
+			ellipse(0, 0, size, size);
+			randomSeed
+			pop();
+		}
+
 		this.render = function(){
 			if (this.solved === false){
 				return;
 			}
+
+			this.drawEllipse(100, 15, 1.4, this.content * 1000);
+			this.drawEllipse(70, 7, 1.1, this.content * 2000);
+			this.drawEllipse(50, 5, 0.9, this.content * 3000);
+
 			push();
-			fill(0, this.alpha);
+			fill(255, this.alpha);
 			textAlign(CENTER, CENTER);
 			translate(this.x, this.y);
 			scale(this.scale);
