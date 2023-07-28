@@ -14,16 +14,25 @@
             <h1>Login to Play</h1>
         </header>
         <main class="container">
-            <!-- Render the sub layout -->
-            {{> login-signup}}
-            {{{ body }}}
+            {{#if logged_in}}
+                {{> navigation}}
+                {{{ body }}}
+            {{else}}
+                {{> login-signup}}
+            {{/if}}
         </main>
     </div>
 
+    <footer>
+        <div class="square"></div>
+    </footer>
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
+    <script src="anime.min.js"></script>
+    
 </body>
 
 </html>
