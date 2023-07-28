@@ -1,3 +1,3 @@
-SELECT * 
-FROM highscore
-ORDER BY high_score;
+-- SELECT * 
+-- FROM highscore
+-- ORDER BY high_score;
