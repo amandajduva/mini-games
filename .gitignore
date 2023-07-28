@@ -1,8 +1,8 @@
 .DS_Store
 node_modules
 .env
-public/games
-public/prototypes
+/public/games
+/public/prototypes
 
 
 # Logs
