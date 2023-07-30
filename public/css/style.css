@@ -6,6 +6,9 @@
 
 a {
     text-decoration: none;
+    color: #39FF14;
+    margin-right: 30px;
+    font-size: 20px;
 }
 
 .top-row {
@@ -24,20 +27,19 @@ a {
     border: 3px solid #39FF14;
     border-radius: 4px;
     margin: 20px;
-    max-width: 15rem;
     min-width: 50%;
 }
 
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
 }
 
-button {
+.btn {
     color: #39FF14;
-    width: 100%;
+    width: 95%;
     font-size: 20px;
     margin: 10px;
     padding: 5px;
@@ -46,7 +48,7 @@ button {
     border-radius: 4px;
 }
 
-button:hover {
+.btn:hover {
     cursor: pointer;
     color: #79ff61;
     border: 3px solid #79ff61; 
@@ -59,7 +61,8 @@ button:hover {
     cursor: pointer;
     color: #39FF14;
     text-decoration: none;
-    font-size: 100%;
+    margin-right: 10px;
+    font-size: 20px;
 }
 
 .form-input {
@@ -70,10 +73,10 @@ button:hover {
 
 .text {
     margin: 10px;
-    padding-left: 20px;
-    font-size: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-left: 30px;
+    font-size: 20px;
+    width: 90%;
+    height: 30px;
     color: #39FF14;
 }
 
@@ -103,7 +106,7 @@ h1 {
     padding: 4rem 6rem 5.5rem;
     border: 0.4rem solid #fff;
     border-radius: 2rem;
-    text-transform: uppercase;
+    text-align: center;
     animation: flicker 1.5s infinite alternate;
 }
 
@@ -159,19 +162,31 @@ h1:focus {
     }
 }
 
-
 label {
     padding-left: 10px;
     font-size: 20px;
     color: #39FF14;
 }
 
-input {
-    font-size: 10px;
-}
-
 .heading {
     color: #39FF14;
     font-size: 40px;
     text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .login {
+        width: 100%;
+    }
+
+    .signup {
+        width: 100%;
+    }
 }
