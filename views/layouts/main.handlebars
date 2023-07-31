@@ -10,15 +10,11 @@
 
 <body>
     <div class="">
-        <header class="header">
-            <h1>Login to Play</h1>
-        </header>
         <main class="container">
             {{#if logged_in}}
                 {{> navigation}}
-            {{else}}
-                {{{ body }}}
             {{/if}}
+            {{{ body }}}
         </main>
     </div>
 
