@@ -10,20 +10,32 @@
 
 <body>
     <div class="">
-        <header class="header">
-            <h1>Login to Play</h1>
-        </header>
         <main class="container">
-            <!-- Render the sub layout -->
-            {{> login-signup}}
+            {{#if logged_in}}
+                {{> navigation}}
+            {{/if}}
             {{{ body }}}
         </main>
     </div>
 
+    <footer>
+        <div class="square"></div>
+    </footer>
     <!-- Render script for logged in users only -->
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
+    <script src="anime.min.js"></script>
+        <script>
+        anime({
+            targets: ".square",
+            translateX: 250,
+            scale: 3,
+            duration: 3000,
+            loop: true
+        });
+    </script>
     
 </body>
 
