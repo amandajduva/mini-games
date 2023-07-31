@@ -11,8 +11,12 @@ Highscore.belongsTo(User, {
     foreignKey: "id"
 });
 
-Games.belongsTo(User, {
-    foreignKey: "id"
+Games.belongsToMany(User, {
+    through: {
+        model: Highscore,
+        unique: false 
+    },
+    as: "game_user"
 });
 
 module.exports = { User, Highscore, Games };
