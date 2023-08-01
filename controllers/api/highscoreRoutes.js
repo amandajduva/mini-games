@@ -3,17 +3,18 @@ const { Highscore, User } = require("../../models");
 
 router
     .post("/save", (req, res) => {
-        Highscore.create({
-            highscore: req.body.highscore,
-            gamename: req.body.gamename,
-            userId: req.session.userId,
-        }).then((dbScoreData) => {
-            res.json(dbScoreData);
-        });
-    })
-    .catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
+        try {
+            Highscore.create({
+                highscore: req.body.highscore,
+                gamename: req.body.gamename,
+                userId: req.session.user_id,
+            }).then((dbScoreData) => {
+                res.json(dbScoreData);
+            });
+        } catch (err) {
+            console.log(err);
+            res.status(500).json(err);
+        }
     });
 
 router.get("/gamescores/:gamename", (req, res) => {
@@ -60,7 +61,7 @@ router.get("/myscores/:gamename", (req, res) => {
         include: [{
             model: User,
             where: {
-                id: req.session.userId
+                id: req.session.user_id
             },
             attributes: ["gamertag"]
         },
