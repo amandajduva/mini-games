@@ -11,6 +11,13 @@ a {
     font-size: 20px;
 }
 
+.game-links {
+    border: 3px solid #39FF14;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 20px;
+}
+
 .top-row {
     display: flex;
     flex-direction: row;
@@ -27,7 +34,7 @@ a {
     border: 3px solid #39FF14;
     border-radius: 4px;
     margin: 20px;
-    min-width: 50%;
+    width: 50%;
 }
 
 .row {
@@ -93,6 +100,7 @@ a {
 body {
     font-family: 'Exo 2', sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #000;
@@ -174,19 +182,36 @@ label {
     text-align: center;
 }
 
+p {
+    padding-bottom: 10px;
+}
+
+.game-header {
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.square {
+    height: 20px;
+    width: 20px;
+    margin: 20px;
+    background-color: #39FF14;
+}
+
 @media screen and (max-width: 992px) {
     .row {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
         flex-direction: column;
         width: 100%;
     }
 
     .login {
-        width: 100%;
+        width: 95%;
     }
 
     .signup {
-        width: 100%;
+        width: 95%;
     }
 }

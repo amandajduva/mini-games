@@ -4,17 +4,17 @@ const { Highscore, User } = require("../../models");
 router
     .post("/save", (req, res) => {
         try {
-    Highscore.create({
-            highscore: req.body.highscore,
-            gamename: req.body.gamename,
-            userId: req.session.user_id,
-        }).then((dbScoreData) => {
-            res.json(dbScoreData);
-        });
+            Highscore.create({
+                highscore: req.body.highscore,
+                gamename: req.body.gamename,
+                userId: req.session.user_id,
+            }).then((dbScoreData) => {
+                res.json(dbScoreData);
+            });
         } catch (err) {
-        console.log(err);
-        res.status(500).json(err);
-        };
+            console.log(err);
+            res.status(500).json(err);
+        }
     });
 
 router.get("/gamescores/:gamename", (req, res) => {
