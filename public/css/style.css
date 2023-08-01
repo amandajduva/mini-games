@@ -11,6 +11,13 @@ a {
     font-size: 20px;
 }
 
+.game-links {
+    border: 3px solid #39FF14;
+    border-radius: 4px;
+    margin: 20px;
+    padding: 20px;
+}
+
 .top-row {
     display: flex;
     flex-direction: row;
@@ -172,6 +179,15 @@ label {
     color: #39FF14;
     font-size: 40px;
     text-align: center;
+}
+
+p {
+    padding-bottom: 10px;
+}
+
+.game-header {
+    margin-top: 30px;
+    justify-content: center;
 }
 
 @media screen and (max-width: 992px) {

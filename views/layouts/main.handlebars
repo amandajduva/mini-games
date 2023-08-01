@@ -12,7 +12,7 @@
     <div class="">
         <main class="container">
             {{#if logged_in}}
-                {{> navigation}}
+            {{> navigation}}
             {{/if}}
             {{{ body }}}
         </main>
@@ -27,7 +27,7 @@
     {{/if}}
 
     <script src="anime.min.js"></script>
-        <script>
+    <script>
         anime({
             targets: ".square",
             translateX: 250,
@@ -36,7 +36,7 @@
             loop: true
         });
     </script>
-    
+
 </body>
 
 </html>
