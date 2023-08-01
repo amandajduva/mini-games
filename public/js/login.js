@@ -44,11 +44,13 @@ const signupFormHandler = async (event) => {
     }
 };
   
-document
-    .querySelector(".login-form")
-    .addEventListener("submit", loginFormHandler);
+loginForm = document.querySelector(".login-form");
+if (loginForm) {
+    loginForm.addEventListener("submit", loginFormHandler);
+}
   
-document
-    .querySelector(".signup-form")
-    .addEventListener("submit", signupFormHandler);
+submitForm = document.querySelector(".signup-form");
+if (submitForm) {
+    submitForm.addEventListener("submit", signupFormHandler);
+}
   
