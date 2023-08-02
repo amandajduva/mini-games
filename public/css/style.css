@@ -260,4 +260,8 @@ canvas {
     .signup {
         width: 90%;
     }
+
+    .text {
+        padding-bottom: 30px;
+    }
 }
