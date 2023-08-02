@@ -33,7 +33,10 @@
     <script>
         anime({
             targets: ".square",
-            translateX: 250,
+            keyframes: [
+                {translateX: 250},
+                {translateX: -250}
+            ],
             duration: 3000,
             loop: true
         });
