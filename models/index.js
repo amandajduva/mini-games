@@ -1,22 +1,17 @@
 const User = require("./user");
 const Highscore = require("./highscore");
-const Games = require("./games");
+// const Games = require("./games");
 
-User.hasMany(Highscore, {
-    foreignKey: "id",
-    onDelete: "CASCADE"
-});
+User.hasMany(Highscore);
 
-Highscore.belongsTo(User, {
-    foreignKey: "id"
-});
+Highscore.belongsTo(User);
 
-Games.belongsToMany(User, {
-    through: {
-        model: Highscore,
-        unique: false 
-    },
-    as: "game_user"
-});
+// Games.belongsToMany(User, {
+//     through: {
+//         model: Highscore,
+//         unique: false 
+//     },
+//     as: "game_user"
+// });
 
-module.exports = { User, Highscore, Games };
+module.exports = { User, Highscore };

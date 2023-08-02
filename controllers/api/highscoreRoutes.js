@@ -8,6 +8,7 @@ router
                 highscore: req.body.highscore,
                 gamename: req.body.gamename,
                 userId: req.session.user_id,
+                name: req.session.username,
             }).then((dbScoreData) => {
                 res.json(dbScoreData);
             });
@@ -30,7 +31,7 @@ router.get("/gamescores/:gamename", (req, res) => {
         order: [["highscore", "DESC"]],
         include: [{
             model: User,
-            attributes: ["gamertag"]
+            attributes: ["name"]
         },
         ]
     })
@@ -63,7 +64,7 @@ router.get("/myscores/:gamename", (req, res) => {
             where: {
                 id: req.session.user_id
             },
-            attributes: ["gamertag"]
+            attributes: ["name"]
         },
         ]
     })
