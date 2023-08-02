@@ -5,6 +5,7 @@ let results = [];
 let solution = null;
 let gameOver = false;
 
+<<<<<<< HEAD
 
 //A Preset For The File
 function setup() {
@@ -17,6 +18,10 @@ function setup() {
     //create Canvas of size of window size and set window height
     createCanvas(width, height);
 
+=======
+function setup(){
+    createCanvas(600, 400);
+>>>>>>> 1ad15ee7744943e2dcab0b5f737f10baa1227ef4
 }
 
 //Sets Up The Environment
