@@ -9,11 +9,13 @@
 </head>
 
 <body>
+    <div class="navigation">
+        {{#if logged_in}}
+        {{> navigation}}
+        {{/if}}
+    </div>
     <div class="">
         <main class="container">
-            {{#if logged_in}}
-            {{> navigation}}
-            {{/if}}
             {{{ body }}}
         </main>
     </div>
@@ -22,16 +24,19 @@
         <div class="square"></div>
     </footer>
     <!-- Render script for logged in users only -->
-    {{#if logged_in}}
+    {{!-- {{#if logged_in}}
     <script src="/js/logout.js"></script>
-    {{/if}}
+    {{/if}} --}}
 
     <script src="/js/login.js"></script>
     <script src="/js/anime.min.js"></script>
     <script>
         anime({
             targets: ".square",
-            translateX: 250,
+            keyframes: [
+                {translateX: 250},
+                {translateX: -250}
+            ],
             duration: 3000,
             loop: true
         });

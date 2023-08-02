@@ -11,6 +11,18 @@ a {
     font-size: 20px;
 }
 
+.navigation {
+    padding: 30px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
 .game-links {
     border: 3px solid #39FF14;
     border-radius: 4px;
@@ -97,14 +109,14 @@ a {
     --neon-border-color: #39FF14;
 }
 
-body {
+.neonText {
     font-family: 'Exo 2', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #000;
-    min-height: 100vh;
+    min-height: 50vh;
 }
 
 h1 {
@@ -191,11 +203,35 @@ p {
     justify-content: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+}
+
 .square {
     height: 20px;
     width: 20px;
     margin: 20px;
     background-color: #39FF14;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    height: 50px;
+    width: 100%;
+}
+
+canvas {
+    margin: auto;
 }
 
 @media screen and (max-width: 992px) {
@@ -213,5 +249,15 @@ p {
 
     .signup {
         width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .login {
+        width: 90%;
+    }
+
+    .signup {
+        width: 90%;
     }
 }
