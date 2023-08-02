@@ -5,6 +5,8 @@ let results = [];
 let solution = null;
 let gameOver = false;
 
+
+//A Preset For The File
 function setup() {
     mode = 0;
   	textAlign(CENTER, CENTER);
@@ -12,17 +14,15 @@ function setup() {
      // set height to window width 
     width = windowWidth;
     height = windowHeight;
-    //create Canvas of size of window size and 1080
+    //create Canvas of size of window size and set window height
     createCanvas(width, height);
 
 }
 
-function preload() {
-
-}
-
+//Sets Up The Environment
 function draw() {
 
+	//Presets for the start splash screen
     clear();
     background(0);
     textSize(32);
@@ -33,7 +33,7 @@ function draw() {
     text('Press TAB To Start', width/2, height/2);
     let alternatingValue = map(sin(frameCount/60), -1, 1, 0, 255);
 	fill(237, 34, 93, alternatingValue);
-    
+  
   }
   
   
@@ -65,6 +65,7 @@ if(solution == true || solution === false){
 }
 
 
+//Messages For Correct Prompts
 function solutionMessage (seed, solution) {
 	let trueMessages = [
 		'GOOD JOB',
@@ -84,11 +85,13 @@ function solutionMessage (seed, solution) {
 
 	let messages;
 
+
 	push();
 	textAlign(CENTER, CENTER);
 	textSize(36);
 	fill(237, 34, 93);
 	randomSeed(seed * 10000);
+
 
 	if (solution === true){
 		background(0);
