@@ -191,11 +191,19 @@ p {
     justify-content: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
 .square {
     height: 20px;
     width: 20px;
     margin: 20px;
     background-color: #39FF14;
+    display: flex;
+    position: fixed;
+    left: 40%;
 }
 
 @media screen and (max-width: 992px) {
