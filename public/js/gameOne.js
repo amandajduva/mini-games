@@ -5,23 +5,13 @@ let results = [];
 let solution = null;
 let gameOver = false;
 
-<<<<<<< HEAD
 
 //A Preset For The File
 function setup() {
     mode = 0;
   	textAlign(CENTER, CENTER);
     textFont('Helvetica');
-     // set height to window width 
-    width = windowWidth;
-    height = windowHeight;
-    //create Canvas of size of window size and set window height
-    createCanvas(width, height);
-
-=======
-function setup(){
-    createCanvas(600, 400);
->>>>>>> 1ad15ee7744943e2dcab0b5f737f10baa1227ef4
+	createCanvas(600, 400);
 }
 
 //Sets Up The Environment
@@ -30,7 +20,7 @@ function draw() {
 	//Presets for the start splash screen
     clear();
     background(0);
-    textSize(32);
+    textSize(25);
   
   if (mode==0) {
       
