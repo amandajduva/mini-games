@@ -5,7 +5,7 @@ let solution = null;
 let gameOver = false;
 
 function setup(){
-    createCanvas(1350, 400);
+    createCanvas(600, 400);
 }
 
 function draw(){
