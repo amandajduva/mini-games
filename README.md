@@ -9,7 +9,7 @@ If you'd like to test changes, clone the repository to your local machine. Run t
 
 To begin, either sign up or login. This will bring you to the page with the links to all existing agmes. Click on the desired game. On that page, you may follow the instructions to play the game. Once you are finished, you may log out or return home to choose a new game.
 
-Link to the [deployed application]().
+Link to the [deployed application](https://mini-games-5df9d3c11dc2.herokuapp.com/).
 
 ![Screenshot](./public/images/minigames-screenshot.png)
 
