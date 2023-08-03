@@ -265,3 +265,17 @@ canvas {
         padding-bottom: 30px;
     }
 }
+
+@media screen and (max-width: 420px) {
+    .login, .signup {
+        width: 95%;
+    }
+
+    .text {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 7rem;
+    }
+}
